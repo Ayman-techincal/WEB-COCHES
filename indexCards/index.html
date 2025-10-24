@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+    }
+  </style>
   </head>
   <body>
-     <div class="container my-4">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container">
             <a class="navbar-brand" href="#">Automoción</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,29 +35,70 @@
               </ul>
             </div>
           </div>
-        </nav>
-      <h1>Coches mas relevantes</h1>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+          <style>
+            .navbar {
+        background: linear-gradient(135deg, #000, #1a1a1a, #2c2c2c);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+      }
+
+      .navbar-brand:hover {
+        color: #00b4d8 !important;
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        position: relative;
+        color: #fff !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00b4d8;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 70%;
+      }
+
+      .nav-link:hover {
+        color: #00b4d8 !important;
+      }
+          </style>
+    </nav>
     <div class="container my-4">
     <main class="my-5">
       <div class="row g-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card shadow-sm h-100">
-            <img src="https://media.tenor.com/wvFcF01dQ9EAAAAM/car-ride.gif">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/05/40543ad341c7ad9b85737cf1254c2d0f-513.jpg">
             <div class="card-body text-center">
-              <h5 class="card-title">GOLF R</h5>
-              <p class="card-text">El Volkswagen Golf R es un vehículo compacto deportivo de alta gama, reconocido por su potencia, tracción total y rendimiento. Está equipado con un motor turbo de 2.0 litros que produce hasta 333 CV, tracción total 4Motion y una caja de cambios automática DSG de 7 velocidades. Acelera de 0 a 100 km/h en 4,6 segundos y alcanza una velocidad máxima de hasta 270 km/h con el paquete opcional R-Performance.</p>
+              <h5 class="card-title">Golf R 20 Aniversario</h5>
+              <p class="card-text">Potencia, precisión y elegancia. El Golf R combina un motor turbo de alto rendimiento con tracción 4Motion, interior premium y tecnología avanzada. Su diseño deportivo y su respuesta inmediata lo convierten en el hatchback definitivo para quienes buscan emoción y confort en cada kilómetro.</p>
               <a href="#" class="btn btn-primary">Més informació</a>
             </div>
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card shadow-sm h-100">
-            <img src="https://media1.tenor.com/m/TmRPRYv13gkAAAAC/audirs6.gif">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/10/40543ad341c7ad9b85737cf1254c2d0f-140.jpg">
             <div class="card-body text-center">
-              <h5 class="card-title">AUDI RS6</h5>
-              <p class="card-text">El Audi RS6 Avant es un familiar de alto rendimiento con un motor V8 biturbo de \(4.0\) litros que produce hasta \(630\) CV y un par de hasta \(850\) Nm. Es conocido por su combinación de un rendimiento similar al de un superdeportivo con la practicidad de un coche familiar, acelerando de \(0\) a \(100\) km/h en unos \(3.4\) segundos y con características como tracción a las cuatro ruedas quattro, suspensión neumática adaptativa y frenos de alto rendimiento.</p>
+              <h5 class="card-title">AUDI RS6 Avant</h5>
+              <p class="card-text">El Audi RS6 redefine el concepto de potencia y elegancia. Con su motor V8 biturbo, tracción quattro y diseño agresivo, ofrece una experiencia de conducción imponente y versátil. Interior de lujo, tecnología de punta y dinamismo puro para quienes exigen lo mejor en cada detalle.</p>
               <a href="#" class="btn btn-primary">Més informació</a>
             </div>
           </div>
@@ -60,10 +106,10 @@
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card shadow-sm h-100">
-            <img src="https://media1.tenor.com/m/opHtqgRhnhUAAAAd/cls63.gif">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/08/Foto-9-7-25-12-33-14-scaled.jpg">
             <div class="card-body text-center">
-              <h5 class="card-title">MERCEDES CLS63s</h5>
-              <p class="card-text">El Mercedes CLS63S es una berlina deportiva de alta gama que combina lujo y alto rendimiento, con un motor V8 biturbo de 5.5 litros (que produce 577 CV en los modelos posteriores) y tracción total 4MATIC.</p>
+              <h5 class="card-title">MERCEDES S 63 Coupe</h5>
+              <p class="card-text">El S63 Coupé representa la fusión perfecta entre elegancia y rendimiento extremo. Su motor AMG V8 biturbo ofrece una aceleración brutal con una suavidad excepcional. Interior artesanal, tecnología avanzada y presencia imponente para quienes buscan exclusividad sin compromisos.</p>
               <a href="#" class="btn btn-primary">Més informació</a>
             </div>
           </div>
@@ -73,6 +119,43 @@
     </main>
 
     </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+      
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.pinimg.com/1200x/c2/30/09/c23009f048e67cb9c24e1d9d7b6fad18.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>¡Imporamos la mejor calidad de vehiculos!</h3>
+            <p>!Ofrecemos un fiabilidad perfecta a la hora de la importacion!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/1200x/7e/f8/c0/7ef8c028b31394f8c093cc1cb9cd3d49.jpg" alt="New York" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>¡Encuentranos en los concesionarios!</h3>
+            <p>Tenemos varios concesionarios por la ciudad de Barcelona!</p>
+          </div>  
+        </div>
+      </div>
+      
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
+  <footer class="bg-dark text-white text-center p-3">
+      © 2025 Institut Barres i Ones
+  </footer>
 </html>
