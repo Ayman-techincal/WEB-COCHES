@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo - Premium Cars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+      }
+      .navbar-brand { font-family: 'Playfair Display', serif; color: #c0c0c0 !important; }
+      .car-card img { height: 180px; object-fit: cover; }
+      .card-title { color: #ffd; }
+      .catalog-grid { gap: 1.25rem; }
+      /* Force a 3-column grid across the full width so cards fill left/center/right columns */
+      .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      /* Make cards a bit taller for nicer balance */
+      .car-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); min-height: 360px; }
+      /* Make cards slightly transparent to match theme */
+      .car-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); }
+      .car-card strong { color: #fff; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Premium Cars</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+            <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacte</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid my-5">
+      <div class="container">
+        <h1 class="mb-4">Catálogo de vehículos</h1>
+
+      </div>
+
+      <div class="container-fluid px-5">
+        <div class="catalog-grid">
+        <!-- Card 1: BMW M3 -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/01/40543ad341c7ad9b85737cf1254c2d0f-554.jpg" class="card-img-top" alt="BMW M3">
+            <div class="card-body">
+              <h5 class="card-title">BMW M3 Competition</h5>
+              <p class="card-text text-white-50">Deportivo de alto rendimiento con chasis afinado y acabados deportivos.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> Inline-6 biturbo</li>
+                <li><strong>Cambio:</strong> Automático 8 velocidades</li>
+                <li><strong>Potencia:</strong> 510 CV</li>
+                <li><strong>Año:</strong> 2024</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Audi RS6 -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/10/40543ad341c7ad9b85737cf1254c2d0f-140.jpg" class="card-img-top" alt="Audi RS6">
+            <div class="card-body">
+              <h5 class="card-title">AUDI RS6 Avant</h5>
+              <p class="card-text text-white-50">Familiar deportivo con diseño imponente y tecnología de última generación.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> V8 biturbo</li>
+                <li><strong>Cambio:</strong> Automático 8 velocidades (tiptronic)</li>
+                <li><strong>Potencia:</strong> 600 CV</li>
+                <li><strong>Año:</strong> 2024</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Tesla Model S -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/03/40543ad341c7ad9b85737cf1254c2d0f-912.jpg" class="card-img-top" alt="Tesla Model S">
+            <div class="card-body">
+              <h5 class="card-title">Audi Q8 RSQ8 Performance</h5>
+              <p class="card-text text-white-50">Sedán eléctrico de alta autonomía y aceleración excepcional, con interior tecnológico.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> V8 biturbo</li>
+                <li><strong>Cambio:</strong> Automático 8 velocidades (tiptronic)</li>
+                <li><strong>Potencia:</strong> 640 CV</li>
+                <li><strong>Año:</strong> 2024</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Mercedes S63 -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/08/Foto-9-7-25-12-33-14-scaled.jpg" class="card-img-top" alt="Mercedes S63">
+            <div class="card-body">
+              <h5 class="card-title">MERCEDES S 63 Coupe</h5>
+              <p class="card-text text-white-50">Gran turismo de lujo con motor AMG V8 y acabados artesanales.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> V8 biturbo AMG</li>
+                <li><strong>Cambio:</strong> AMG SPEEDSHIFT 9G</li>
+                <li><strong>Potencia:</strong> 630 CV</li>
+                <li><strong>Año:</strong> 2023</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Audi RS3 -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/09/40543ad341c7ad9b85737cf1254c2d0f-637.jpg" class="card-img-top" alt="Audi RS3">
+            <div class="card-body">
+              <h5 class="card-title">Audi RS3 Sportback</h5>
+              <p class="card-text text-white-50">Compacto deportivo con reacción rápida y tracción quattro.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> 2.5 TFSI 5 cilindros turbo</li>
+                <li><strong>Cambio:</strong> S tronic 7 velocidades</li>
+                <li><strong>Potencia:</strong> 400 CV</li>
+                <li><strong>Año:</strong> 2025</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: BMW M5 Touring -->
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/05/40543ad341c7ad9b85737cf1254c2d0f-135.jpg" class="card-img-top" alt="BMW M5 Touring">
+            <div class="card-body">
+              <h5 class="card-title">BMW Serie 5 M5 Touring</h5>
+              <p class="card-text text-white-50">Familiar deportivo con enorme capacidad y prestaciones destacadas.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> 4.4 V8 TwinPower Turbo</li>
+                <li><strong>Cambio:</strong> M Steptronic 8 velocidades</li>
+                <li><strong>Potencia:</strong> 625 CV</li>
+                <li><strong>Año:</strong> 2025</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2023/10/IMG_E0477_Easy-Resize.com_.jpg" class="card-img-top" alt="Lexus LC 500">
+            <div class="card-body">
+              <h5 class="card-title">MERCEDES BENZ A 45 S AMG 4MATIC</h5>
+              <p class="card-text text-white-50">Compacto deportivo con prestaciones extremas y manejo ágil.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> 2.0 L 4 cilindros turbo</li>
+                <li><strong>Cambio:</strong> AMG Speedshift DCT 8 velocidades</li>
+                <li><strong>Potencia:</strong> 421 CV</li>
+                <li><strong>Año:</strong> 2021</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/05/40543ad341c7ad9b85737cf1254c2d0f-513.jpg" class="card-img-top" alt="Ford Ranger Raptor">
+            <div class="card-body">
+              <h5 class="card-title">Volkswagen Golf R 20 Aniversario</h5>
+              <p class="card-text text-white-50">Deportivo compacto de alto rendimiento con espíritu exclusivo y prestaciones destacadas.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> 2,0 L 4 cilindros turbo</li>
+                <li><strong>Cambio:</strong> Automática de doble embrague DSG 7 velocidades</li>
+                <li><strong>Potencia:</strong> 333 CV</li>
+                <li><strong>Año:</strong> 2024</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card car-card h-100 shadow-sm">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/08/40543ad341c7ad9b85737cf1254c2d0f-684.jpg" class="card-img-top" alt="Jaguar F-Type">
+            <div class="card-body">
+              <h5 class="card-title">Lamborghini Urus</h5>
+              <p class="card-text text-white-50">SUV deportivo de lujo con enorme presencia y prestaciones de supercoche.</p>
+              <ul class="list-unstyled text-white-50 mb-2">
+                <li><strong>Motor:</strong> 4,0 L V8 biturbo</li>
+                <li><strong>Cambio:</strong> Automático 8 velocidades</li>
+                <li><strong>Potencia:</strong> 641 CV CV</li>
+                <li><strong>Año:</strong> 2021</li>
+              </ul>
+              <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-outline-light btn-sm">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+      © 2025 Premium Cars
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
