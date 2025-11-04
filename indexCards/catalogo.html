@@ -38,13 +38,58 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catálogo</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacte</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Iniciar Sesion</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    <style>
+      .navbar {
+        background: linear-gradient(135deg, #000, #1a1a1a, #2c2c2c);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+      }
+
+      .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+        font-size: 1.6rem;
+        position: relative;
+        top: -6px;
+        color: #c0c0c0 !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      }
+
+      .navbar-brand:hover {
+        color: #00b4d8 !important;
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        position: relative;
+        color: #fff !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00b4d8;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after { width: 70%; }
+      .nav-link:hover { color: #00b4d8 !important; }
+    </style>
 
     <main class="container-fluid my-5">
       <div class="container">
@@ -59,8 +104,8 @@
           <div class="card car-card h-100 shadow-sm">
             <img src="https://rspremiumcar.com/wp-content/uploads/2025/01/40543ad341c7ad9b85737cf1254c2d0f-554.jpg" class="card-img-top" alt="BMW M3">
             <div class="card-body">
-              <h5 class="card-title">BMW M3 Competition</h5>
-              <p class="card-text text-white-50">Deportivo de alto rendimiento con chasis afinado y acabados deportivos.</p>
+              <h5 class="card-title">BMW M3 Competition Touring</h5>
+              <p class="card-text text-white-50">Deportivo versátil con gran equilibrio entre rendimiento, precisión y estilo distintivo para el día a día.</p>
               <ul class="list-unstyled text-white-50 mb-2">
                 <li><strong>Motor:</strong> Inline-6 biturbo</li>
                 <li><strong>Cambio:</strong> Automático 8 velocidades</li>
@@ -100,7 +145,7 @@
             <img src="https://rspremiumcar.com/wp-content/uploads/2025/03/40543ad341c7ad9b85737cf1254c2d0f-912.jpg" class="card-img-top" alt="Tesla Model S">
             <div class="card-body">
               <h5 class="card-title">Audi Q8 RSQ8 Performance</h5>
-              <p class="card-text text-white-50">Sedán eléctrico de alta autonomía y aceleración excepcional, con interior tecnológico.</p>
+              <p class="card-text text-white-50">SUV de lujo con diseño atlético, potencia explosiva y tecnología avanzada para un manejo excepcional.</p>
               <ul class="list-unstyled text-white-50 mb-2">
                 <li><strong>Motor:</strong> V8 biturbo</li>
                 <li><strong>Cambio:</strong> Automático 8 velocidades (tiptronic)</li>
