@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+    }
+    /* Carrusel más grande alineado a la derecha y cuadro de escritura a la izquierda */
+    .carousel-right {
+      max-width: 560px; /* ancho máximo del carrusel (ajustable) */
+      margin-left: auto; /* empuja el carrusel hacia la derecha */
+      margin-right: 1rem;
+    }
+
+    .carousel-right .carousel-inner img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Opcional: esconder captions si no se usan */
+    .carousel-right .carousel-caption { display: none; }
+
+    /* Cuadro de escritura a la izquierda: fondo transparente para mimetizar con el fondo de la página */
+    .write-box {
+      min-height: 320px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .write-box .card-body {
+      background: transparent;
+      padding: 1rem;
+    }
+    .write-box .form-control {
+      background: transparent; /* mismo color del fondo (transparente sobre el gradient) */
+      color: #fff; /* texto en blanco */
+      border: 1px solid rgba(255,255,255,0.08);
+      resize: vertical;
+    }
+    .write-box .form-control::placeholder { color: rgba(255,255,255,0.7); }
+    .write-box .card-title { color: #00b4d8; }
+
+    /* Texto no editable que reemplaza al textarea: mantiene saltos de línea y estilo transparente */
+    .readonly-text {
+      background: transparent;
+      color: #fff;
+      border: none; /* quitar la línea del cuadro */
+      padding: 0.5rem;
+      min-height: 200px;
+      white-space: pre-wrap;
+      overflow: auto;
+      border-radius: 0.25rem;
+      box-shadow: none; /* asegurar que no haya sombra */
+      font-weight: 700; /* poner el texto en negrita */
+    }
+    /* Cards in the main catalog: use a dark translucent background so they don't appear white */
+    main .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    main .card .card-body { color: #e6eef8; }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">Premium Cars  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="catalogo.html">Catálogo</a>
+                </li>
+                <li class="nav-item logged-out">
+                  <a class="nav-link" href="login.html">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item" id="userDisplay" style="display: none;">
+                  <span class="nav-link">
+                    <span id="username-display"></span>
+                    <a href="#" id="logoutBtn" class="ms-2 text-danger" style="text-decoration:none;">Salir</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <style>
+            .navbar {
+        background: linear-gradient(135deg, #000, #1a1a1a, #2c2c2c);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+      }
+
+      .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+        font-size: 1.6rem;
+        position: relative;
+        top: -6px; /* sube el texto ligeramente */
+        color: #c0c0c0 !important; /* plateado */
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      }
+
+      .navbar-brand:hover {
+        color: #00b4d8 !important;
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        position: relative;
+        color: #fff !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00b4d8;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 70%;
+      }
+
+      .nav-link:hover {
+        color: #00b4d8 !important;
+      }
+          </style>
+    </nav>
+    <div class="container my-4">
+    <main class="my-5">
+      <div class="row g-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/05/40543ad341c7ad9b85737cf1254c2d0f-513.jpg">
+            <div class="card-body text-center">
+              <h5 class="card-title">Golf R 20 Aniversario</h5>
+              <p class="card-text">Edición especial que celebra dos décadas de pura emoción. El Golf R 20 Aniversario, en su exclusivo color azul, combina potencia turbo con tracción 4Motion y detalles únicos R. Interior deportivo, sonido envolvente y acabados exclusivos que reflejan la esencia de Volkswagen Performance. Un compacto legendario hecho para disfrutar cada curva con estilo.</p>
+              <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/10/40543ad341c7ad9b85737cf1254c2d0f-140.jpg">
+            <div class="card-body text-center">
+              <h5 class="card-title">AUDI RS6 Avant</h5>
+              <p class="card-text">El RS6 Avant en color Gris Nardo combina potencia extrema con diseño inconfundible. Su motor V8 biturbo y tracción quattro ofrecen un rendimiento brutal con el confort de un gran turismo. Interior de lujo, tecnología de última generación y presencia dominante. Un familiar con alma de superdeportivo, listo para impresionar en cada trayecto.</p>
+              <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+          </div>
+        </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <img src="https://rspremiumcar.com/wp-content/uploads/2025/08/Foto-9-7-25-12-33-14-scaled.jpg">
+            <div class="card-body text-center">
+              <h5 class="card-title">MERCEDES S 63 Coupe</h5>
+              <p class="card-text">El S63 Coupé en color negro brillo irradia presencia y exclusividad. Su motor AMG V8 biturbo combina potencia descomunal con una suavidad de conducción inigualable. Interior artesanal, materiales nobles y tecnología avanzada definen un gran turismo de lujo absoluto. Cada detalle refleja distinción, clase y un rendimiento digno de la élite automotriz.</p>
+              <a href="#" class="btn btn-primary">Més informació</a>
+            </div>
+          </div>
+        </div>
+
+
+    </main>
+
+    </div>
+
+    <div class="container my-4">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-md-5">
+          <div class="card shadow-sm h-100 write-box">
+            <div class="card-body d-flex flex-column">
+              <div class="readonly-text flex-grow-1 mb-2" role="region" aria-label="Descripción">
+En Premium Cars, te espera una amplia gama de vehículos diseñada para todos los gustos y necesidades.
+Desde sedanes elegantes y coupés deportivos, hasta SUVs potentes, pick-ups versátiles y autos de lujo que marcan la diferencia.
+
+Cada modelo combina diseño, tecnología y confort, ofreciéndote una experiencia de conducción única.
+Ya sea que busques rendimiento, seguridad o distinción, aquí encontrarás el vehículo perfecto para ti.
+
+Elige. Conduce. Disfruta.
+Tu nuevo auto te está esperando en Premium Cars.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 d-flex justify-content-end align-items-center">
+          <div id="demo" class="carousel slide carousel-right w-100" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://rspremiumcar.com/wp-content/uploads/2025/04/40543ad341c7ad9b85737cf1254c2d0f-588.jpg" alt="Los Angeles" class="d-block w-100">
+                <div class="carousel-caption"></div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://rspremiumcar.com/wp-content/uploads/2025/09/40543ad341c7ad9b85737cf1254c2d0f-636.jpg" alt="New York" class="d-block w-100">
+                <div class="carousel-caption"></div>
+               </div>
+              <div class="carousel-item">
+                <img src="https://rspremiumcar.com/wp-content/uploads/2025/09/Foto-12-9-25-17-49-05-scaled.jpg" alt="New York" class="d-block w-100">
+                <div class="carousel-caption"></div>
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+      // Mostrar usuario en navbar si está logueado
+      function checkLoggedInUser() {
+        const currentUser = localStorage.getItem('currentUser');
+        const userDisplay = document.getElementById('userDisplay');
+        const usernameDisplay = document.getElementById('username-display');
+        const loginLink = document.querySelector('.logged-out');
+
+        if (currentUser) {
+          userDisplay.style.display = 'block';
+          usernameDisplay.textContent = currentUser;
+          if (loginLink) loginLink.style.display = 'none';
+        } else {
+          userDisplay.style.display = 'none';
+          if (loginLink) loginLink.style.display = 'block';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        checkLoggedInUser();
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) logoutBtn.addEventListener('click', function(e){ e.preventDefault(); localStorage.removeItem('currentUser'); localStorage.removeItem('currentUserEmail'); checkLoggedInUser(); window.location.href='login.html'; });
+      });
+    </script>
+  </body>
+  <footer class="bg-dark text-white text-center p-3">
+      © 2025 GERMAN PREMIUM CARS
+  </footer>
+</html>
